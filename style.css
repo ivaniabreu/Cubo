@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@100&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 5%;
+    background: #000;
+    overflow: hidden;
+}
+
+.text
+{
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5em;
+    width: 12.5em;
+    height: 12.5em;
+}
+
+.text h2
+{
+    text-align: center;
+    color: #03e9f4;
+    font-family: 'Tourney', cursive;
+    font-size: 1.6em;
+    box-shadow: 0 0 0.3125em rgba(3, 233, 244, 1),
+                0 0 1.5625em rgba(3, 233, 244, 1),
+                0 0 3.125em rgba(3, 233, 244, 1),
+                0 0 6em rgba(3, 233, 244, 1),
+                0 0 10em rgba(3, 233, 244, 0.5),
+                0 0 14em rgba(3, 232, 244, 0.33);
+}
+
+.container 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8%;
+    transform: rotate(-25deg);
+    width: 100%;
+    
+}
+
+.container .box
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% + 22em);
+    height: 6.1em;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #000);
+    animation: animateSurface 1.5s ease-in-out infinite;
+}
+
+.container .cubo 
+{
+    position: relative;
+    width: 6em;
+    height: 6em;
+    background: #03e9f4;
+    box-shadow: 0 0 0.3125em rgba(3, 232, 244, 0.8),
+                0 0 1.5625em rgba(3, 232, 244, 1),
+                0 0 3.5em rgba(3, 233, 244, 1),
+                0 0 6em rgba(3, 233, 244, 0.7),
+                0 0 13em rgba(3, 233, 244, 0.6),
+                0 0 18em rgba(3, 233, 244, 0.5);
+    transform-origin: bottom right;
+    animation: animate 1.5s ease-in-out infinite;
+}
+
+
+
+@keyframes animateSurface 
+{
+    0%
+    {
+        transform: translateX(0em);
+    }
+    100%
+    {
+        transform: translateX(-6em);
+    }    
+}
+
+@keyframes animate 
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    60%
+    {
+        transform: rotate(90deg);
+    }
+    65%
+    {
+        transform: rotate(85deg);
+    }
+    70%
+    {
+        transform: rotate(90deg);
+    }
+    75%
+    {
+        transform: rotate(86.5deg);
+    }
+    80%, 100%
+    {
+        transform: rotate(90deg);
+    }
+    
+}
